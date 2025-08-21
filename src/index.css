@@ -11,3 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.projects {
+  padding: 50px;
+  background-color: #000000;
+  text-align: center;
+  color: #FFF;
+  font-weight: 600;
+}
+.project-card i{
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+.projects span{
+  color:#eaee0d;
+}
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+.project-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: black ;
+}
+
+.project-card {
+ background: #eaee0d;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: #000000 5px solid;
+}
+.project-card:hover {
+  transform: translateY(-7px);
+}
+body{
+  scroll-behavior: smooth;
+  background-color: #000000;
+  font-family: 'Poppins', sans-serif;
+}

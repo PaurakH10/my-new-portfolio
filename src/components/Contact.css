@@ -1,0 +1,104 @@
+.contac {
+  background: #000;
+  box-sizing: fit;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 100px;
+}
+.contact-title {
+  position: relative;
+  font-weight: 900;
+}
+.contact-title span {
+  color: #eaee08;
+}
+.contact-title h1 {
+  padding: 0px 30px;
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+}
+.contact-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.contact-section {
+  display: flex;
+  gap: 100px;
+}
+.contact-left {
+  display: flex;
+  flex-direction: column;
+}
+.contact-left h1 span {
+  color: #eaee08;
+}
+.contact-left h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+}
+.contact-left p {
+  font-size: 20px;
+  color: #fff;
+  line-height: 35px;
+  max-width: 550px;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #D8D8D8;
+  font-size: 22px;
+}
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-top: 1rem;
+}
+.contact-right label {
+  font-size: 22px;
+  color: #D8D8D8;
+  font-weight: 500;
+  align-items: start;
+}
+.contact-right input {
+  border: none;
+  width: 500px;
+  height: 78px;
+  padding-left: 20px;
+  border-radius: 4px;
+  color: #A0A0A0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+.contact-right textarea {
+  border: none;
+  width: 500px;
+  padding: 25px;
+  border-radius: 4px;
+  color: #A0A0A0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+.btn-primary {
+  cursor: pointer;
+}
+.btn-primary:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
