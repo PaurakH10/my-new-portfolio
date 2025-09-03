@@ -138,6 +138,14 @@
     transform: scale(1.05);
     transition: transform 0.3s ease-out;
 } 
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #5b67f1, #8b5cf6);
+  border: none;
+  border-radius: 2px;
+  margin: 20px 0;
+}
 /* Responsive: stack on small screens */
 @media (max-width: 860px) {
   .hero-container {
@@ -148,4 +156,18 @@
     order: -1; /* show image first on mobile (optional) */
     aspect-ratio: 16 / 9;
   }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInRight {
+  animation: slideInRight 3s ease-out forwards;
 }

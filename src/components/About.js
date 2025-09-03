@@ -1,8 +1,9 @@
 import React from "react";
 import "./About.css";
+
 const About = () => {
   return (
-    <section className="about" id="About">
+    <section className="about fadeInRight" id="About">
       <div className="about-container">
         <div className="about-image">
           <img
@@ -21,7 +22,7 @@ const About = () => {
             My goal is to keep improving my skills while helping others
             understand programming in the simplest way possible 🚀.
           </p>
-          <a href="#projects" id="Projects" className="btn-primary">See My Projects</a>
+          <a href="#Projects" id="Projects" className="btn-primary">See My Projects</a>
         </div>
       </div>
     </section>

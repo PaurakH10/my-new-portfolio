@@ -76,3 +76,17 @@
   font-size: 18px;
   color: #ddd;
 }
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInLeft {
+  animation: slideInLeft 1s ease-out forwards;
+}

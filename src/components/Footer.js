@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer fadeInLeft">
       <div className="download-social">
         <div className="social-icons">
           <a href="https://github.com/PaurakH10/" target="_blank" rel="noopener noreferrer">
@@ -22,13 +22,13 @@ const Footer = () => {
       </div>
 
       <div className="footer-container">
-        <p>© 2025 Your Name. All rights reserved.</p>
+        <p>© 2025 Paurakh Bhandari. All rights reserved.</p>
         <div className="footer-links">
-            <a href="#Projects">Home</a>
-            <a href="#Projects">About</a>
+            <a href="#Hero">Home</a>
+            <a href="#About">About</a>
           <a href="#Projects">Projects</a>
-          <a href="#About">Contact</a>
-          <a href="#Contact">Gallery</a>
+          <a href="#Contact">Contact</a>
+          <a href="#Services">Services</a>
         </div>
       </div>
     </footer>

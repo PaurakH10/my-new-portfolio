@@ -2,7 +2,7 @@ import React from "react";
 import './Gallery.css';
 const Gallery = () => {
   return (
-    <section className="gallery" id="Projects">
+    <section className="gallery fadeInLeft" id="Projects">
       <div className="gallery-container">
         <div className="gallery-title">
             <h1>My Recent <span>Projects</span></h1> 

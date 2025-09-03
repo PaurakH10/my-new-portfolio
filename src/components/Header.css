@@ -25,7 +25,9 @@
   color: #eaee0d; /* highlight color */
 }
 .logo:hover{
-  transform: scale(1.05) ease;
+    transition: color 0.3s ease;
+    transform: scale(1.25);
+    transition: 0.5s ease-in;
 }
 
 /* Desktop nav */

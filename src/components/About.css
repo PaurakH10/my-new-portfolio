@@ -30,6 +30,7 @@
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 1rem;
+  font-weight: 900;
 }
 .about-content h2 span {
   color: #eaee0d;
@@ -53,4 +54,18 @@
 }
 .btn:hover {
   background: #005f87;
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInRight {
+  animation: slideInRight 1s ease-out forwards;
 }

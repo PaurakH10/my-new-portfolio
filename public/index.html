@@ -10,8 +10,9 @@
       content="Web site created using create-react-app"
     />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -41,5 +42,37 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+      <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1481.0.min.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init({
+      publicKey: "DgINRXvhqKiVs2RVX",
+    });
+  })();
+</script>
+
+<script>
+  function sendmail() {
+    const templateParams = {
+      name: document.querySelector("#name").value,
+      email: document.querySelector("#email").value,
+      subject: document.querySelector("#subject").value,
+      message: document.querySelector("#message").value,
+    };
+
+    emailjs
+      .send("service_i2j775k", "template_k6xrhpa", templateParams)
+      .then(() => {
+        alert("Email sent!!!");
+      })
+      .catch(() => {
+        alert("Email not sent!!!");
+      });
+  }
+</script>
+
+    </body>
 </html>

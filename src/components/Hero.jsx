@@ -3,7 +3,7 @@ import "./Hero.css";
 // import heroImg from "../assets/hero.jpg";
 export default function Hero() {
   return (
-    <section className="hero" id="Hero">
+    <section className="hero fadeInRight" id="Hero">
       <div className="hero-container">
         {/* Left: Text */}
         <div className="hero-content">
@@ -29,6 +29,7 @@ export default function Hero() {
             alt=""
             loading="lazy"
           />
+          <hr class="section-divider animated" />
         </div>
       </div>
       
