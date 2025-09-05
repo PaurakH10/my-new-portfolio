@@ -41,6 +41,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-container">
+        <h1>Mr.Paurakh Babu Bhandari</h1>
         <p>© 2025 Paurakh Bhandari. All rights reserved.</p>
         <div className="footer-links">
             <a href="#Hero">Home</a>
