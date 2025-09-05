@@ -32,6 +32,74 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <div id="loading-screen">
+      <div class="spinner"></div>
+      <div class="loading-text">Loading...</div>
+    </div>
+<style>
+  /* Fullscreen overlay with subtle dark gradient */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #0e0e0e, #1a1a1a);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Spinner style - double ring */
+.spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 6px solid transparent;
+  border-top: 6px solid #eaee08; /* Yellow */
+  border-bottom: 6px solid #eaee08;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+.spinner::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  border: 6px solid transparent;
+  border-left: 6px solid #f3f3f3; /* Light gray */
+  border-right: 6px solid #f3f3f3;
+  border-radius: 50%;
+  animation: spinReverse 0.8s linear infinite;
+}
+
+/* Loading text style */
+.loading-text {
+  margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  color: #eaee08;
+  text-shadow: 0 0 5px #eaee08;
+  user-select: none;
+}
+
+/* Spin animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes spinReverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+</style>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -46,6 +114,20 @@
 <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
+<script>
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loading-screen');
+    // Show for at least 2.5 seconds
+    setTimeout(() => {
+      loader.style.opacity = '0';
+      loader.style.transition = 'opacity 1.5s ease';
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 1500); // Wait for fade-out transition
+    }, 1500);
+  });
+</script>
+
 <script type="text/javascript">
   (function () {
     emailjs.init({

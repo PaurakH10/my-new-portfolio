@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./About.css";
 
 const About = () => {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+ 
+
   return (
-    <section className="about fadeInRight" id="About">
+    <section ref={ref} className={`about fadeInRight ${visible ? 'visible' : ''}`} id="About">
       <div className="about-container">
         <div className="about-image">
           <img

@@ -1,7 +1,26 @@
 // src/components/Projects.js
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function Projects() {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   const projectData = [
     {
       title: "UI/UX Design",
@@ -32,12 +51,11 @@ function Projects() {
       title: "Deployment & Hosting",
       description: "I deploy websites and apps to platforms like Netlify, Vercel, or Firebase for reliable hosting.",
       icon: "ri-cloud-line",
-
-    }
+    },
   ];
 
   return (
-    <section className="projects fadeInLeft" id="Services">
+    <section ref={ref} className={`projects fadeInLeft ${visible ? 'visible' : ''}`} id="Services">
       <h2>My <span>Services</span></h2>
       <div className="project-list">
         {projectData.map((project) => (

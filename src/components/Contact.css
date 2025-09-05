@@ -1,5 +1,4 @@
 .contac {
-  background: #000;
   box-sizing: fit;
 }
 .contact {
@@ -13,15 +12,16 @@
 .contact-title {
   position: relative;
   font-weight: 900;
+  color: #000000;
 }
 .contact-title span {
-  color: #eaee08;
+  color: #000000;
 }
 .contact-title h1 {
   padding: 0px 30px;
   font-size: 50px;
   font-weight: 600;
-  color: #fff;
+  color: #000000;
   font-weight: 900;
 }
 .contact-title img {
@@ -39,16 +39,16 @@
   flex-direction: column;
 }
 .contact-left h1 span {
-  color: #eaee08;
+  color: #000000;
 }
 .contact-left h1 {
   font-size: 50px;
   font-weight: 600;
-  color: #fff;
+  color: #000000;
 }
 .contact-left p {
   font-size: 20px;
-  color: #fff;
+  color: var(--oxford-blue);
   line-height: 35px;
   max-width: 550px;
   font-weight: 600;
@@ -57,7 +57,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  color: #D8D8D8;
+  color: #000000;
   font-size: 22px;
 }
 .contact-detail {
@@ -77,9 +77,10 @@
 }
 .contact-right label {
   font-size: 22px;
-  color: #fff;
+  color: var(--oxford-blue);
   font-weight: 500;
   align-items: start;
+  font-weight: 600;
 }
 .contact-right input {
   border: none;
@@ -87,7 +88,7 @@
   height: 78px;
   padding-left: 20px;
   border-radius: 4px;
-  color: #000000;
+  color: var(--oxford-blue);
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 600;
@@ -97,7 +98,7 @@
   width: 500px;
   padding: 25px;
   border-radius: 4px;
-  color: #000000;
+  color: var(--oxford-blue);
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 600;
@@ -122,4 +123,141 @@
 
 .slideInLeft {
   animation: slideInLeft 1s ease-out forwards;
+}
+/* Small screens - Mobile */
+@media (max-width: 640px) {
+  .contact {
+    margin: 40px 20px;
+    gap: 40px;
+  }
+  
+  .contact-title h1 {
+    font-size: 32px;
+    padding: 0 10px;
+  }
+  
+  .contact-section {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .contact-left h1 {
+    font-size: 28px;
+  }
+  
+  .contact-left p {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 100%;
+  }
+  
+  .contact-details {
+    font-size: 18px;
+  }
+  
+  .contact-right input,
+  .contact-right textarea {
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .contact-right label {
+    font-size: 18px;
+  }
+}
+
+/* Medium screens - Tablets */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .contact {
+    margin: 60px 40px;
+    gap: 60px;
+  }
+  
+  .contact-title h1 {
+    font-size: 40px;
+    padding: 0 20px;
+  }
+  
+  .contact-section {
+    flex-direction: row;
+    gap: 60px;
+  }
+  
+  .contact-left h1 {
+    font-size: 40px;
+  }
+  
+  .contact-left p {
+    font-size: 18px;
+    line-height: 32px;
+    max-width: 80%;
+  }
+  
+  .contact-details {
+    font-size: 20px;
+  }
+  
+  .contact-right input,
+  .contact-right textarea {
+    width: 100%;
+    max-width: 400px;
+    font-size: 20px;
+  }
+  
+  .contact-right label {
+    font-size: 20px;
+  }
+}
+
+/* Large screens - Desktop */
+@media (min-width: 1024px) {
+  .contact {
+    margin: 80px 100px;
+    gap: 80px;
+  }
+  
+  .contact-title h1 {
+    font-size: 50px;
+    padding: 0 30px;
+  }
+  
+  .contact-section {
+    flex-direction: row;
+    gap: 100px;
+  }
+  
+  .contact-left h1 {
+    font-size: 50px;
+  }
+  
+  .contact-left p {
+    font-size: 20px;
+    line-height: 35px;
+    max-width: 550px;
+  }
+  
+  .contact-details {
+    font-size: 22px;
+  }
+  
+  .contact-right input,
+  .contact-right textarea {
+    width: 500px;
+    font-size: 20px;
+  }
+  
+  .contact-right label {
+    font-size: 22px;
+  }
+}
+
+/* Scroll-triggered transition */
+.contac {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.contac.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

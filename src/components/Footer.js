@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './Footer.css';
 
 const Footer = () => {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <footer className="footer fadeInLeft">
+    <footer ref={ref} className={`footer fadeInLeft ${visible ? 'visible' : ''}`}>
       <div className="download-social">
         <div className="social-icons">
           <a href="https://github.com/PaurakH10/" target="_blank" rel="noopener noreferrer">

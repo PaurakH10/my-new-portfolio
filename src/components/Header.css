@@ -1,6 +1,6 @@
 .header {
-  background: #111;
-  color: #fff;
+  background: #caf0f8;
+  color: var(--platinum);
   position: sticky; /* stays at top when scrolling */
   top: 0;
   z-index: 50;
@@ -17,12 +17,12 @@
 
 .logo {
   font-size: 25px;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   font-weight: 900;
 }
 .logo span {
-  color: #eaee0d; /* highlight color */
+  color: #000000; /* highlight color */
 }
 .logo:hover{
     transition: color 0.3s ease;
@@ -37,15 +37,15 @@
 }
 .nav-link {
  font-size: 18px;
-  color: #fff;
+  color: var(--oxford-blue);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   margin-left: 35px;
   border-bottom: 2px solid transparent;
   transition: 0.5s;
 }
 .nav-link .active{
-  border-bottom: 2px solid #eaee0d; /* highlight color */
+  border-bottom: 2px solid #000000; /* highlight color */
 }
 
 .nav-link:hover,
@@ -54,7 +54,7 @@
   text-decoration: none;
 }
 .nav-link:hover,.nav-link.active {
-  border-bottom: 2px solid #fff; /* highlight color */
+  border-bottom: 2px solid #000000; /* highlight color */
 }
 
 /* Hamburger button (hidden on desktop) */
@@ -73,8 +73,8 @@
   margin: 5px 0;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
+/* ================= Small Screens: up to 640px ================= */
+@media (max-width: 640px) {
   .menu-toggle {
     display: block;
   }
@@ -91,21 +91,80 @@
     flex-direction: column; /* vertical list */
     min-width: 180px;
     gap: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
   }
 
   .nav.open {
-    display: flex;          /* shown when state is open */
+    display: flex;          /* shown when open */
   }
-  a{
+
+  .nav-link {
+    margin-left: 0;
     font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    border-bottom: 2px solid transparent;
-    transition: 0.5s;
+    padding: 8px 0;
   }
-  .header .container a.nav-link{
-    font-size: 25px
+}
+
+/* ================= Medium Screens: 641px - 1023px (tablets) ================= */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    right: 24px;
+    top: 56px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 16px;
+    display: none;
+    flex-direction: column;
+    min-width: 220px;
+    gap: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.7);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav-link {
+    margin-left: 0;
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+}
+
+/* ================= Large Screens: 1024px and up ================= */
+@media (min-width: 1024px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    gap: 20px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .nav-link {
+    margin-left: 35px;
+    font-size: 18px;
+    padding: 0;
+  }
+
+  .logo {
+    font-size: 30px;
   }
 }

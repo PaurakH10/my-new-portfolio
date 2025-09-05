@@ -1,7 +1,8 @@
 .about {
   padding: 4rem 2rem;
-  background: #000000;
   margin: 100px 100px;
+  color: var(--orange-web);
+  background-color: #caf0f8;
 }
 .about-container {
   display: flex;
@@ -28,24 +29,24 @@
 }
 .about-content h2 {
   font-size: 2.5rem;
-  color: #fff;
+  color: #000000;
   margin-bottom: 1rem;
   font-weight: 900;
 }
 .about-content h2 span {
-  color: #eaee0d;
+  color: #000000;
 }
 .about-content p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #fff;
+  color: var(--oxford-blue);
   margin-bottom: 1rem;
   font-weight: 600;
 }
 .btn {
   display: inline-block;
-  background: #0077b5;
-  color: white;
+  background: var(--orange-web);
+  color: var(--black);
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
@@ -53,7 +54,7 @@
   transition: background 0.3s ease;
 }
 .btn:hover {
-  background: #005f87;
+  background: var(--saffron);
 }
 @keyframes slideInRight {
   from {
@@ -68,4 +69,77 @@
 
 .slideInRight {
   animation: slideInRight 1s ease-out forwards;
+}
+/* Default styles for large screens already set */
+
+/* Small screens (mobile) */
+@media (max-width: 640px) {
+  .about {
+    margin: 40px 16px; /* smaller margins for narrow screens */
+    padding: 2rem 1rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .about-image img {
+    width: 180px; /* smaller image */
+    height: auto;
+  }
+
+  .about-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .about {
+    margin: 60px 40px;
+    padding: 3rem 2rem;
+  }
+
+  .about-container {
+    gap: 2.5rem;
+    max-width: 720px;
+  }
+
+  .about-image img {
+    width: 220px;
+  }
+
+  .about-content h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .about-content p {
+    font-size: 1.05rem;
+  }
+  .about-content {
+    text-align: center;
+  }
+}
+
+/* Scroll-triggered transition */
+.about {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.about.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -1,10 +1,28 @@
 // src/components/Contact.js
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
   const form = useRef();
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => observer.disconnect();
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,7 +45,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="contac fadeInRight" id="Contact">
+    <section ref={ref} className={`contac fadeInRight ${visible ? 'visible' : ''}`} id="Contact">
       <div className="contact">
         <div className="contact-title">
           <h1>Get in <span>touch</span></h1>
