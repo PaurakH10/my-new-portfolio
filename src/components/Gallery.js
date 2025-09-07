@@ -28,22 +28,22 @@ const Gallery = () => {
             </div>
         <div className="gallery-grid">
           <div className="gallery-item">
-          <img src="https://images-cdn.ubuy.co.id/65eec32f45467825a63ed6ce-nike-fc-barcelona-home-youth-soccer.jpg" alt="Gallery Image 1" />
+          <img src="https://www.investopedia.com/thmb/ckPwC5ARwco1nOSCKVGE57se8MI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1245748917-99e3329a7b8147e8ab648806220ce153.jpg" alt="Gallery Image 1" />
           </div>
           <div className="gallery-item">
           <img src="https://i.namu.wiki/i/DZFBzzYUTooUqJv4lQbAgSlCjOlmndpYTR1JcFC6cF-tZTpSeLNyDb7JlHQeVx3QF9k7d1tQmHSa3YZrovXa8g.webp" alt="Gallery Image 1" />
           </div>
           <div className="gallery-item">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVl-j04O3swPMgcNCExtSc_PAjavlQ5Lncsg&s" alt="Gallery Image 1" />
+          <img src="https://e0.365dm.com/20/08/2048x1152/skysports-lionel-messi-graphic_5077688.jpg?20200826083544" alt="Gallery Image 1" />
           </div>
           <div className="gallery-item">
-          <img src="https://i.ebayimg.com/images/g/ZcEAAOSw6lplOcZx/s-l1200.jpg" alt="Gallery Image 1" />
+          <img src="https://www.fcbarcelona.com/photo-resources/2022/08/02/ae5252d1-b79b-4950-9e34-6e67fac09bb0/LeoMessi20092010_pic_fcb-arsenal62.jpg?width=1200&height=750" alt="Gallery Image 1" />
           </div>
           <div className="gallery-item">
-          <img src="https://indiansoccermart.in/cdn/shop/files/PhotoRoom-20230721_145410_1_1200x1200.png?v=1689931499" alt="Gallery Image 1" />
+          <img src="https://www.si.com/.image/t_share/MTY4MTAyNTc0Nzg3NDA1MDcz/messi-jersey-real-madridjpg.jpg" alt="Gallery Image 1" />
           </div>
           <div className="gallery-item">
-          <img src="https://theshoppies.pk/wp-content/uploads/2023/05/FC-Barcelona-2025-26-Home-Jersey.jpg" alt="Gallery Image 1" />
+          <img src="https://images.indianexpress.com/2020/12/lionel-messi.jpg?w=414" alt="Gallery Image 1" />
           </div>
           </div>
         </div>

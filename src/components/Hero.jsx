@@ -50,7 +50,7 @@ export default function Hero() {
           <div className="hero-media" aria-hidden="true">
             <img
               // src={heroImg}
-              src="https://www.365scores.com/news/wp-content/uploads/2025/01/GettyImages-671969260-scaled.jpg"
+              src="https://c4.wallpaperflare.com/wallpaper/472/228/2/lionel-messi-fifa-world-cup-2022-football-trophy-argentina-hd-wallpaper-preview.jpg"
               alt="Profile of Paurakh Bhandari"
               loading="lazy"
             />
