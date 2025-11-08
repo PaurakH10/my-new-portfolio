@@ -39,10 +39,6 @@ const About = () => {
               alt="Profile"
               className="about-img"
             />
-            <div className="image-badge">
-              <i className="ri-code-s-slash-line"></i>
-              <span>Developer</span>
-            </div>
           </div>
         </div>
 
