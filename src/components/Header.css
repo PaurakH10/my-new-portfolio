@@ -20,14 +20,43 @@
   color: #000000;
   text-decoration: none;
   font-weight: 900;
+  position: relative;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(3, 4, 94, 0.05) 0%, rgba(3, 4, 94, 0.1) 100%);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
 }
+
+.logo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, #03045e, #0077b6);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.logo:hover::before {
+  opacity: 1;
+}
+
 .logo span {
-  color: #000000; /* highlight color */
+  color: #03045e;
+  position: relative;
+  font-weight: 900;
 }
-.logo:hover{
-    transition: color 0.3s ease;
-    transform: scale(1.25);
-    transition: 0.5s ease-in;
+
+.logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(3, 4, 94, 0.2);
+  background: linear-gradient(135deg, rgba(3, 4, 94, 0.08) 0%, rgba(3, 4, 94, 0.15) 100%);
 }
 
 /* Desktop nav */

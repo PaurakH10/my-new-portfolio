@@ -63,13 +63,31 @@ const Contact = () => {
 
             <div className="contact-details">
               <div className="contact-detail">
-                <p><strong>Gmail:</strong> paurakhbhandari847@gmail.com</p>
+                <div className="contact-icon">
+                  <i className="ri-mail-line"></i>
+                </div>
+                <div className="contact-info">
+                  <h4>Email</h4>
+                  <p>paurakhbhandari847@gmail.com</p>
+                </div>
               </div>
               <div className="contact-detail">
-                <p><strong>Phone No:</strong> +772-825-524</p>
+                <div className="contact-icon">
+                  <i className="ri-phone-line"></i>
+                </div>
+                <div className="contact-info">
+                  <h4>Phone</h4>
+                  <p>+772-825-524</p>
+                </div>
               </div>
               <div className="contact-detail">
-                <p><strong>Location:</strong> CA, United States</p>
+                <div className="contact-icon">
+                  <i className="ri-map-pin-line"></i>
+                </div>
+                <div className="contact-info">
+                  <h4>Location</h4>
+                  <p>CA, United States</p>
+                </div>
               </div>
             </div>
           </div>
