@@ -27,7 +27,6 @@ export default function Hero() {
       <div className="hero-container">
         {/* Left: Text content */}
         <div className="hero-content">
-          <p className="eyebrow">🚀 Build with React</p>
           <h1 className="hero-title">
             Hello Everyone!!<br />
             I am <span className="highlight"><strong>Paurakh Bhandari</strong></span>
@@ -38,7 +37,7 @@ export default function Hero() {
           </p>
           <div className="hero-actions">
             <a className="btn1 btn-primary" href="#Contact">Hire me</a>
-            <a className="btn1 btn-ghost" href="/Paurakh_Bhandari_CV.pdf" download>Download CV</a>
+            <a className="btn1 btn-ghost" href="#Contact">Contact for CV</a>
           </div>
         </div>
 

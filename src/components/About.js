@@ -33,7 +33,6 @@ const About = () => {
       <div className="about-container">
         <div className="about-left">
           <div className="about-image-wrapper">
-            <div className="image-decoration"></div>
             <img
               src="https://ih1.redbubble.net/image.5663203833.2608/st,small,507x507-pad,600x600,f8f8f8.u2.jpg"
               alt="Profile"
