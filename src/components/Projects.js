@@ -56,13 +56,19 @@ function Projects() {
 
   return (
     <section ref={ref} className={`projects fadeInLeft ${visible ? 'visible' : ''}`} id="Services">
-      <h2>My <span>Services</span></h2>
+      <div className="services-header">
+        <h2>My <span>Services</span></h2>
+        <p className="services-subtitle">Delivering creative solutions with passion and expertise</p>
+      </div>
       <div className="project-list">
-        {projectData.map((project) => (
-          <div className="project-card" key={project.title}>
-            <i className={`project-icon ${project.icon}`}></i>
+        {projectData.map((project, index) => (
+          <div className="project-card" key={project.title} style={{ animationDelay: `${index * 0.1}s` }}>
+            <div className="card-icon-wrapper">
+              <i className={`project-icon ${project.icon}`}></i>
+            </div>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
+            <div className="card-decoration"></div>
           </div>
         ))}
       </div>
