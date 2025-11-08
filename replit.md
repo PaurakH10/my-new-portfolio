@@ -27,6 +27,10 @@ A personal portfolio website built with React (Create React App). The site showc
   - Set up WebSocket port configuration (WDS_SOCKET_PORT=0)
   - Created workflow for React development server
   - Installed all npm dependencies
+- Implemented scroll-based active navigation highlighting:
+  - Navigation links now automatically highlight based on the current section in view
+  - Uses IntersectionObserver API to track scroll position
+  - Active state updates smoothly as user scrolls through sections
 
 ## Running the Project
 The project runs automatically via the configured workflow:
