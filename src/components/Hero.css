@@ -313,11 +313,16 @@
   .hero-actions {
     flex-direction: column;
     align-items: center;
+    gap: 12px;
   }
 
   .btn1 {
     width: 100%;
+    max-width: 100%;
     text-align: center;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    border-width: 2px;
   }
 
   .hero-media {
@@ -344,10 +349,13 @@
   .hero-actions {
     justify-content: center;
     flex-wrap: wrap;
+    gap: 14px;
   }
 
   .btn1 {
-    padding: 10px 24px;
+    padding: 12px 28px;
+    font-size: 0.92rem;
+    min-width: 160px;
   }
 
   .hero-media {
