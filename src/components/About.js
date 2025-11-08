@@ -34,8 +34,8 @@ const About = () => {
         <div className="about-left">
           <div className="about-image-wrapper">
             <img
-              src="https://ih1.redbubble.net/image.5663203833.2608/st,small,507x507-pad,600x600,f8f8f8.u2.jpg"
-              alt="Profile"
+              src="/paurakh-photo.jpg"
+              alt="Paurakh Bhandari"
               className="about-img"
             />
           </div>
