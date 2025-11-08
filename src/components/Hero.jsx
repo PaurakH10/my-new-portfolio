@@ -44,7 +44,7 @@ export default function Hero() {
         {/* Right: Image with morphing effect */}
         <div className="hero-media" aria-hidden="true">
           <img
-            src="https://c4.wallpaperflare.com/wallpaper/472/228/2/lionel-messi-fifa-world-cup-2022-football-trophy-argentina-hd-wallpaper-preview.jpg"
+            src="/profile-photo.jpg"
             alt="Profile of Paurakh Bhandari"
             loading="lazy"
           />
