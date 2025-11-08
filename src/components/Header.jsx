@@ -53,8 +53,8 @@ export default function Header() {
         </button>
         <nav className={open ? "nav open" : "nav"}>
           <a href="#Hero" className={`nav-link ${activeSection === "Hero" ? "active" : ""}`}>Home</a>
-          <a href="#About" className={`nav-link ${activeSection === "About" ? "active" : ""}`}>About</a>
           <a href="#Services" className={`nav-link ${activeSection === "Services" ? "active" : ""}`}>Services</a>
+          <a href="#About" className={`nav-link ${activeSection === "About" ? "active" : ""}`}>About</a>
           <a href="#Projects" className={`nav-link ${activeSection === "Projects" ? "active" : ""}`}>Projects</a>
           <a href="#Contact" className={`nav-link ${activeSection === "Contact" ? "active" : ""}`}>Contact</a>
         </nav>
