@@ -137,7 +137,9 @@
 }
 
 .btn1 {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 14px 32px;
   border-radius: 50px;
   text-decoration: none;
@@ -147,6 +149,7 @@
   border: 3px solid transparent;
   position: relative;
   overflow: hidden;
+  line-height: 1;
 }
 
 .btn1::before {
