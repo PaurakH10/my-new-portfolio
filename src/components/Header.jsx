@@ -5,40 +5,35 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState("Hero");
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
-    
-    const observerOptions = {
-      root: null,
-      rootMargin: "-50% 0px -50% 0px",
-      threshold: 0
-    };
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section[id]");
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+      let currentSection = "Hero";
+      
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSection = section.id;
         }
       });
-    }, observerOptions);
 
-    const handleScroll = () => {
       if (window.scrollY < 100) {
-        setActiveSection("Hero");
+        currentSection = "Hero";
       }
+
+      setActiveSection(currentSection);
     };
 
     handleScroll();
     window.addEventListener("scroll", handleScroll);
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+    window.addEventListener("resize", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
+      window.removeEventListener("resize", handleScroll);
     };
   }, []);
 
