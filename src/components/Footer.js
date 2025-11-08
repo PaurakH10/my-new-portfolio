@@ -56,9 +56,6 @@ const Footer = () => {
               <a href="https://www.youtube.com/@prasanna-freefire1667" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <i className="ri-youtube-fill"></i>
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <i className="ri-twitter-fill"></i>
-              </a>
             </div>
           </div>
 
