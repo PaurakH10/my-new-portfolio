@@ -21,11 +21,21 @@ export default function Header() {
       });
     }, observerOptions);
 
+    const handleScroll = () => {
+      if (window.scrollY < 100) {
+        setActiveSection("Hero");
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
     sections.forEach((section) => {
       observer.observe(section);
     });
 
     return () => {
+      window.removeEventListener("scroll", handleScroll);
       sections.forEach((section) => {
         observer.unobserve(section);
       });
